@@ -1,0 +1,29 @@
+<div class="order-container">
+  <h2>Order Page</h2>
+
+  <div class="product-info">
+    <img [src]="selectedProduct.image" [alt]="selectedProduct.title" />
+    <div class="details">
+      <h3>{{ selectedProduct.title }}</h3>
+      <p>Price: ₹{{ selectedProduct.price }} per unit</p>
+
+      <label>Quantity:
+        <input type="number" [(ngModel)]="quantity" min="1" />
+      </label>
+
+      <p><strong>Total: ₹{{ getTotal(selectedProduct.price, quantity) }}</strong></p>
+
+      <button (click)="addToCart()">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-selector">
+    <label>Select Another Product:
+      <select (change)="changeProduct($event)">
+        <option *ngFor="let p of availableProducts" [value]="p.title">
+          {{ p.title }}
+        </option>
+      </select>
+    </label>
+  </div>
+</div>

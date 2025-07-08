@@ -1,0 +1,393 @@
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+
+  .logo img {
+    max-height: 50px;
+  }
+
+  .top-icons i {
+    cursor: pointer;
+    color: #555;
+
+    &:hover {
+      color: #28a745;
+    }
+  }
+}
+
+.navbar {
+  position: sticky;
+  top: 65px; /* Height of the top bar */
+  z-index: 1020;
+  padding: 10px 0;
+
+  .nav-link {
+    color: white !important;
+    margin-right: 15px;
+    font-weight: 500;
+
+    &.active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 120px; /* Height of top bar + navbar */
+  left: 0;
+  width: 250px;
+  height: calc(100vh - 120px);
+  transform: translateX(-260px);
+  transition: transform 0.3s ease;
+  z-index: 1010;
+  overflow-y: auto;
+
+  .list-group-item {
+    padding: 12px 20px;
+    border-left: none;
+    border-right: none;
+    cursor: pointer;
+
+    i {
+      margin-right: 10px;
+      color: #28a745;
+    }
+
+    &:hover {
+      background-color: #f8f9fa;
+      color: #28a745;
+    }
+  }
+
+  &.open {
+    transform: translateX(0);
+  }
+}
+
+.sidebar-toggle-btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  i {
+    margin-right: 8px;
+  }
+
+  &:hover {
+    background-color: #218838;
+  }
+}
+
+.user-icon-wrapper {
+  position: relative;
+  display: inline-block;
+
+  i {
+    cursor: pointer;
+    color: #444;
+    transition: color 0.2s ease;
+    &:hover {
+      color: #8DA43A;
+    }
+  }
+
+  .login-popup {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 280px;
+    background-color: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 1050;
+
+    .login-header {
+      height: 4px;
+      background-color: #8DA43A;
+    }
+
+    .login-body {
+      padding: 20px;
+
+      h5 {
+        font-size: 18px;
+        color: #333;
+      }
+
+      .form-control {
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        &:focus {
+          border-color: #8DA43A;
+          box-shadow: none;
+        }
+      }
+
+      .btn-success {
+        background-color: #8DA43A;
+        border: none;
+        transition: background-color 0.3s;
+        &:hover {
+          background-color: #7a9636;
+        }
+      }
+
+      .text-success {
+        font-size: 13px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+/* Dropdown menu styles */
+.navbar-dark .navbar-nav .dropdown-menu {
+  background-color: #28a745;
+  border: none;
+  border-radius: 0;
+}
+
+.navbar-dark .navbar-nav .dropdown-item {
+  color: white !important;
+  padding: 8px 20px;
+  
+  &:hover {
+    background-color: #218838;
+  }
+}
+
+/* Nested dropdown styles */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  display: none;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu > a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: white;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+
+.dropdown-toggle::after {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+/* Ensure dropdowns appear above other content */
+.dropdown-menu {
+  z-index: 1050 !important;
+}
+
+
+.navbar-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.icon-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.icon-wrapper .fa {
+  color: #154734;
+}
+
+.icon-wrapper .badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #ff5252;
+  color: #fff;
+  border-radius: 12px;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.icon-wrapper.cart .badge {
+  background: #689f38;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #f8f9fa;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.nav-right {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.cart-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.cart-modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 80%;
+  width: 90%;
+  max-width: 500px;
+  overflow-y: auto;
+}
+
+.cart-modal-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.cart-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-info h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.item-info p {
+  margin: 4px 0;
+  color: #666;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity-controls button {
+  padding: 2px 8px;
+  font-size: 18px;
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-btn {
+  background: none;
+  color: red;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.cart-total {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.close-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+//order-know style code.
+
+.order-button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 12px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &:hover {
+    background-color: #218838;
+  }
+}

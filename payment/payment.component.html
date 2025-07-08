@@ -1,0 +1,14 @@
+<div class="dialog-wrapper">
+  <h2>Complete Your Payment</h2>
+  <p>Amount to pay: ₹{{ data.amount }}</p>
+
+  <label *ngFor="let option of ['Credit Card', 'Debit Card', 'PhonePe', 'Google Pay', 'Cash On Delivery']">
+    <input type="radio" name="method" [(ngModel)]="selectedMethod" [value]="option" />
+    {{ option }}
+  </label>
+
+  <div class="dialog-actions">
+    <button class="confirm-btn" (click)="confirmPayment()">Confirm & Pay</button>
+    <button class="cancel-btn" (click)="cancel()">Cancel</button>
+  </div>
+</div>

@@ -1,0 +1,218 @@
+<br>
+<!-- 1st section html code. -->
+<section class="slider-section">
+  <div class="slider-container">
+    <div
+      class="slide"
+      *ngFor="let slide of slides; let i = index"
+      [ngClass]="{ 'active': currentSlide === i }"
+      [style.backgroundImage]="'url(' + slide.image + ')'">
+      
+      <div class="slide-content">
+        <h5 class="small-title">Green Land</h5>
+        <h2 class="main-title">Capital Organic Farming</h2>
+        <h4>{{ slide.subtitle }}</h4>
+        <h1>{{ slide.title }}</h1>
+        <p>{{ slide.description }}</p>
+        <a href="#" class="btn">{{ slide.button }} <span>➤</span></a>
+      </div>
+    </div>
+
+    <button class="arrow prev" (click)="prevSlide()">←</button>
+    <button class="arrow next" (click)="nextSlide()">→</button>
+  </div>
+</section>
+
+
+<!-- 2nd section html code. -->
+
+<section class="about-section">
+  <div class="about-container">
+    <!-- Left Image -->
+    <div class="about-image">
+      <img src="https://cdn.pixabay.com/photo/2024/07/11/20/49/fruits-8889065_1280.jpg" alt="Juice Glass" />
+    </div>
+
+    <!-- Right Content -->
+   <div class="about-content">
+  <h5 class="section-label">Welcome to Green Land</h5>
+  <h2 class="main-heading">
+    Capital Organic Farming <br />
+    Powered by Nature & Community
+  </h2>
+  <p class="description">
+    At Green Land, we believe in bringing farm-fresh, chemical-free organic vegetables directly from
+    the fields to your plate. Our model promotes sustainable agriculture and ethical sourcing while
+    empowering local farmers and encouraging healthy living across the nation.
+  </p>
+  <p class="description">
+    We proudly collaborate with <strong>Platen Green Infra Company</strong> to build smart,
+    eco-friendly farming infrastructure that ensures purity, freshness, and quality in every
+    vegetable we grow and deliver. Together, we are shaping a better future—one plate at a time.
+  </p>
+
+  <!-- Founder Info -->
+  <div class="founder">
+    <img
+      src="data:image/jpeg;base64,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"
+      alt="Founder"
+      class="founder-img"
+    />
+    <div>
+      <h4 class="founder-name">Vinay Ram Kumar</h4>
+      <span class="founder-role">Founder & Head of Organic Growth</span>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+<hr>
+<!-- 3rd section html code. -->
+
+
+<section class="how-section">
+  <div class="how-container">
+    <div class="step">
+      <img src="https://cdn-icons-png.flaticon.com/128/7662/7662391.png" alt="Starter" />
+      <h4>Pick a starter option</h4>
+      <p>Choose from select produce to start. Keep, add, or remove items.</p>
+    </div>
+
+    <img class="arrow" src="https://cdn-icons-png.flaticon.com/128/271/271228.png" alt="Arrow" />
+
+    <div class="step">
+      <img src="https://cdn-icons-png.flaticon.com/128/11110/11110740.png" alt="Groceries" />
+      <h4>Shop groceries</h4>
+      <p>Add in your grocery staples, snacks, and other favorite pantry items every week.</p>
+    </div>
+
+    <img class="arrow" src="https://cdn-icons-png.flaticon.com/128/271/271228.png" alt="Arrow" />
+
+    <div class="step">
+      <img src="https://cdn-icons-png.flaticon.com/128/12389/12389900.png" alt="Delivery" />
+      <h4>We deliver. You enjoy.</h4>
+      <p>Save yourself a trip to the store and enjoy tasty meals – how delicious is that?</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- 4th section html code. -->
+
+<section class="choose-section">
+  <div class="choose-container">
+    <!-- Left Text -->
+    <div class="choose-content">
+      <h5 class="tagline">Why Choose Us</h5>
+      <h2 class="heading">Empowering Organic Farming with Green Land Capital</h2>
+      <p class="subtext">
+        In partnership with Planet Green Infra, we promote sustainable agriculture, ensure healthy produce,
+        and build a cleaner, greener future — one organic farm at a time.
+      </p>
+
+      <!-- Accordion Items -->
+      <div class="accordion">
+        <div
+          class="accordion-item"
+          *ngFor="let item of features; let i = index"
+          (click)="toggleItem(i)">
+          <div class="accordion-header" [class.active]="activeItem === i">
+            <span class="circle">{{ activeItem === i ? '›' : '⌄' }}</span>
+            <h4>{{ item.title }}</h4>
+          </div>
+          <div class="accordion-body" *ngIf="activeItem === i">
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="choose-image">
+      <img
+        src="https://media.istockphoto.com/id/1440488434/photo/happy-family-of-gardeners-posing-with-harvest-of-vegetables.jpg?s=612x612&w=0&k=20&c=fFNAKrmfE8Rfgn6WLaj4uuaWFmlmW33704VvwwuKCXc="
+        alt="Organic Farmers in Field" />
+      <h1 class="organic-text">100% Organic</h1>
+    </div>
+  </div>
+</section>
+
+<!-- 5th section html code. -->
+
+
+<section class="footer-top">
+  <div class="contact-info">
+    <div class="info-box">
+      <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Call Icon">
+      <div>
+        <p>CALL US 24/7</p>
+        <h4>(1800)-88-66-991</h4>
+      </div>
+    </div>
+    <div class="info-box">
+      <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email Icon">
+      <div>
+        <p>EMAIL US</p>
+        <h4>contact&#64;example.com</h4>
+      </div>
+    </div>
+    <div class="info-box social-icons">
+      <p>FOLLOW US</p>
+      <div class="icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+    <div class="info-box payment-icons">
+      <img src="https://cdn-icons-png.flaticon.com/128/349/349221.png" alt="MasterCard">
+      <img src="https://cdn-icons-png.flaticon.com/128/196/196565.png" alt="PayPal">
+      <img src="https://cdn-icons-png.flaticon.com/128/196/196578.png" alt="American Express">
+      <img src="https://cdn-icons-png.flaticon.com/128/825/825454.png" alt="Bitcoin">
+      <img src="https://cdn-icons-png.flaticon.com/128/825/825487.png" alt="Western Union">
+      <img src="https://cdn-icons-png.flaticon.com/128/196/196561.png" alt="Visa">
+    </div>
+  </div>
+</section>
+
+<section class="footer-bottom">
+  <div class="footer-content">
+    <div class="footer-column logo-section">
+      <img src="data:image/png;base64,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" alt="Freshio Logo">
+    </div>
+    <div class="footer-column">
+      <h4>STORE LOCATION</h4>
+      <p>9066 Green Lake Drive Chevy<br>Chase, MD 20815</p>
+      <p>Monday – Saturday:<br><strong>8:00 am – 4:00pm</strong></p>
+      <p>Sunday:<br><strong>9:00 am – 5:00pm</strong></p>
+    </div>
+   <div class="footer-column">
+  <h4>INFORMATION</h4>
+  <a href="#">About us</a><br>
+  <a href="#">Blog</a><br>
+  <a href="#">Check out</a><br>
+  <a href="#">Contact</a><br>
+  <a href="#">Service</a><br>
+</div>
+
+<div class="footer-column">
+  <h4>MY ACCOUNT</h4>
+  <a href="#">My Account</a><br>
+  <a href="#">Contact</a><br>
+  <a href="#">Shopping cart</a><br>
+  <a href="#">Shop</a><br>
+</div>
+
+<div class="footer-column">
+  <h4>CATEGORIES</h4>
+  <a href="#">Fruits & Vegetables</a><br>
+  <a href="#">Dairy Products</a><br>
+  <a href="#">Package Foods</a><br>
+  <a href="#">Beverage</a><br>
+  <a href="#">Health & Wellness</a><br>
+</div>
+
+  </div>
+</section>

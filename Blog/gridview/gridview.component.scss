@@ -1,0 +1,387 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-section {
+  padding: 40px 20px;
+}
+
+.blog-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.blog-posts {
+  flex: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.post-card {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.post-image {
+  position: relative;
+  width: 100%;
+  padding-top: 65%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px 6px 0 0;
+}
+
+.badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #91a500;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+.post-info {
+  padding: 15px;
+}
+
+.meta {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.post-info h3 {
+  font-size: 20px;
+  color: #004d26;
+  margin: 10px 0;
+}
+
+.desc {
+  font-size: 14px;
+  color: #444;
+}
+
+.blog-sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-box input {
+  flex: 1 1 auto;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+}
+
+.search-box button {
+  padding: 8px 15px;
+  background-color: #004d26;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.sidebar-block h4 {
+  font-size: 18px;
+  color: #004d26;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.sidebar-block ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar-block ul li {
+  font-size: 14px;
+  margin: 6px 0;
+  color: #444;
+}
+
+.recent-post {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.recent-post .thumb {
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.recent-post .title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #004d26;
+  margin: 0;
+}
+
+.recent-post .date {
+  font-size: 12px;
+  color: #999;
+}
+
+/* Image background placeholders */
+.img-1 {
+  background-image: url('https://img.freepik.com/free-photo/side-view-cake-with-chocolate-syrup-plate_176474-3195.jpg');
+}
+
+.img-2 {
+  background-image: url('https://img.freepik.com/free-photo/pancake-with-chocolate-syrup-banana-plate_176474-3203.jpg');
+}
+
+/* ✅ Mobile Responsiveness */
+@media screen and (max-width: 991px) {
+  .blog-container {
+    flex-direction: column;
+  }
+
+  .blog-posts {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-sidebar {
+    width: 100%;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box input,
+  .search-box button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .post-info h3 {
+    font-size: 18px;
+  }
+
+  .desc {
+    font-size: 13px;
+  }
+
+  .recent-post .thumb {
+    width: 50px;
+    height: 50px;
+  }
+
+  .recent-post .title {
+    font-size: 13px;
+  }
+
+  .recent-post .date {
+    font-size: 11px;
+  }
+}
+
+
+
+
+.post-section {
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.container-posts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.post-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.post-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.img1 {
+  background-image: url('https://img.freepik.com/free-photo/delicious-appetizer-black-plate_144627-23325.jpg');
+}
+
+.img2 {
+  background-image: url('https://img.freepik.com/free-photo/pancakes-with-caramel-nuts_140725-1451.jpg');
+}
+
+.img3 {
+  background-image: url('https://img.freepik.com/free-photo/top-view-cabbage-rolls-dish_23-2148821863.jpg');
+}
+
+.img4 {
+  background-image: url('https://img.freepik.com/free-photo/top-view-pizza-nan-peppers-black_23-2148821813.jpg');
+}
+
+.post-category {
+  background: #9fc200;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.post-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #003d29;
+  padding: 0 15px;
+  margin-top: 10px;
+}
+
+.post-meta {
+  color: #888;
+  font-size: 14px;
+  padding: 0 15px 15px;
+}
+
+/* ✅ Mobile View */
+@media screen and (max-width: 768px) {
+  .container-posts {
+    grid-template-columns: 1fr;
+  }
+
+  .post-title {
+    font-size: 18px;
+  }
+}
+
+
+
+.footer-top {
+  background: #fdfbf9;
+  padding: 30px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.info-box {
+  margin: 10px 20px;
+}
+
+.info-box img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.info-box p {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0;
+  color: #333;
+}
+
+.info-box h4 {
+  margin: 5px 0 0;
+  color: #92b100;
+  font-size: 16px;
+}
+
+.social-icons .icons i {
+  font-size: 18px;
+  margin: 0 5px;
+  color: #b1b31d;
+}
+
+.payment-icons img {
+  width: 40px;
+  height: auto;
+  margin: 0 5px;
+}
+
+.footer-bottom {
+  background: #fff;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.footer-column {
+  flex: 1 1 180px;
+  margin: 20px;
+}
+
+.footer-column h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.footer-column p {
+  color: #777;
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.logo-section img {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-info, .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .payment-icons img {
+    margin: 5px;
+  }
+}
+
+

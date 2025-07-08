@@ -1,0 +1,259 @@
+.shop-banner-bg {
+  position: relative;
+  background-color: #f9fdf1;
+  background-image: url('https://cdn.pixabay.com/photo/2019/04/13/19/10/grapes-4125348_1280.jpg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  padding: 80px 40px;
+
+  .banner-content {
+    max-width: 600px;
+    z-index: 2;
+    position: relative;
+
+    h1 {
+      font-size: 48px;
+      font-weight: bold;
+      color: #14532d;
+      margin-bottom: 10px;
+    }
+
+    .breadcrumb {
+      font-size: 16px;
+      margin-bottom: 20px;
+
+      a {
+        text-decoration: none;
+        color: #999;
+        margin-right: 5px;
+      }
+
+      span {
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+    }
+
+    .lead {
+      font-size: 18px;
+      line-height: 1.6;
+      color: black;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(249, 253, 241, 0.705); // soft overlay for readability
+    z-index: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-banner-bg {
+    padding: 60px 20px;
+    background-position: bottom center;
+    background-size: cover;
+
+    .banner-content h1 {
+      font-size: 32px;
+    }
+
+    .banner-content .lead {
+      font-size: 16px;
+    }
+  }
+}
+
+
+// 2nd section css code.
+
+
+.product-section {
+  background: #f3fff3;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+
+  .category-title {
+    font-size: 24px;
+    color: #1c8b4a;
+    margin: 30px 0 15px;
+    border-bottom: 2px solid #1c8b4a;
+    padding-bottom: 5px;
+  }
+
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+
+  .product-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 10px 0;
+      color: #14532d;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #5a7d25;
+      margin-bottom: 10px;
+    }
+
+    .order-link {
+      background-color: #1c8b4a;
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: bold;
+
+      &:hover {
+        background-color: #14532d;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .product-card {
+      width: 100%;
+    }
+
+    .category-title {
+      font-size: 20px;
+    }
+  }
+}
+
+
+
+// 3rd  section style code.
+
+
+.footer-top {
+  background: #fdfbf9;
+  padding: 30px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.info-box {
+  margin: 10px 20px;
+}
+
+.info-box img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.info-box p {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0;
+  color: #333;
+}
+
+.info-box h4 {
+  margin: 5px 0 0;
+  color: #92b100;
+  font-size: 16px;
+}
+
+.social-icons .icons i {
+  font-size: 18px;
+  margin: 0 5px;
+  color: #b1b31d;
+}
+
+.payment-icons img {
+  width: 40px;
+  height: auto;
+  margin: 0 5px;
+}
+
+.footer-bottom {
+  background: #fff;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.footer-column {
+  flex: 1 1 180px;
+  margin: 20px;
+}
+
+.footer-column h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.footer-column p {
+  color: #777;
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.logo-section img {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-info, .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .payment-icons img {
+    margin: 5px;
+  }
+}
+
+

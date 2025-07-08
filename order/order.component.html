@@ -1,0 +1,52 @@
+<div class="order-page">
+  <div class="order-header">
+    <h1>Cart</h1>
+    <p>Home › Cart</p>
+  </div>
+
+  <div class="order-layout">
+    <div class="order-left">
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of cartItems; let i = index">
+            <td class="product-info">
+              <img [src]="item.image" alt="image" />
+              <span>{{ item.name }}</span>
+            </td>
+            <td>£{{ item.price.toFixed(2) }}</td>
+            <td>
+              <button (click)="decreaseQuantity(i)">-</button>
+              <input type="text" [value]="item.quantity" readonly />
+              <button (click)="increaseQuantity(i)">+</button>
+            </td>
+            <td>£{{ (item.price * item.quantity).toFixed(2) }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="coupon-area">
+        <input type="text" placeholder="Coupon code" [(ngModel)]="couponCode" />
+        <button (click)="applyCoupon()">Apply coupon</button>
+      </div>
+    </div>
+
+    <div class="order-right">
+      <h3>CART TOTALS</h3>
+      <p><span>Subtotal</span> <strong>₹{{ subtotal.toFixed(2) }}</strong></p>
+      <p *ngIf="discountPercentage > 0">
+        <span>Discount ({{ discountPercentage }}%)</span>
+        <strong>- ₹{{ discountAmount.toFixed(2) }}</strong>
+      </p>
+      <p><span>Total</span> <strong class="total">₹{{ totalPrice.toFixed(2) }}</strong></p>
+      <button (click)="proceedToCheckout()">Proceed to checkout</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,312 @@
+.post-layout {
+  padding: 40px 20px;
+  background: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.post-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Left Side */
+.post-content {
+  flex: 1 1 65%;
+}
+
+.category {
+  background-color: #a6c00b;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.post-title {
+  font-size: 28px;
+  color: #004d2a;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.meta {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.meta a {
+  color: #006633;
+  text-decoration: none;
+}
+
+.post-image-full {
+  width: 100%;
+  height: 420px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.img-planet-green {
+  background-image: url('https://cdn.pixabay.com/photo/2017/05/24/19/32/pizza-2341377_1280.jpg');
+}
+
+.post-description {
+  color: #444;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.adblock-note {
+  border-left: 4px solid #a6c00b;
+  padding-left: 20px;
+  margin: 30px 0;
+  font-size: 18px;
+  font-style: italic;
+  color: #333;
+}
+
+.adblock-note cite {
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: bold;
+  color: #222;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.tags-list span {
+  padding: 6px 12px;
+  background: #f1f1f1;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* Right Sidebar */
+.sidebar {
+  flex: 1 1 30%;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.search-box button {
+  padding: 8px 14px;
+  border: none;
+  background-color: #004d2a;
+  color: white;
+  border-radius: 5px;
+}
+
+.sidebar-block {
+  margin-bottom: 30px;
+}
+
+.sidebar-block h3 {
+  color: #004d2a;
+  margin-bottom: 12px;
+}
+
+.sidebar-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-block ul li {
+  margin-bottom: 6px;
+  font-size: 15px;
+  color: #333;
+}
+
+.recent-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.recent-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.recent-item p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.recent-item small {
+  color: #666;
+  font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .post-container {
+    flex-direction: column;
+  }
+
+  .post-image-full {
+    height: 240px;
+  }
+
+  .post-title {
+    font-size: 22px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box input,
+  .search-box button {
+    width: 100%;
+  }
+
+  .tags-list {
+    justify-content: flex-start;
+  }
+
+  .recent-item img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+
+
+
+
+
+
+
+
+.footer-top {
+  background: #fdfbf9;
+  padding: 30px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.info-box {
+  margin: 10px 20px;
+}
+
+.info-box img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.info-box p {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0;
+  color: #333;
+}
+
+.info-box h4 {
+  margin: 5px 0 0;
+  color: #92b100;
+  font-size: 16px;
+}
+
+.social-icons .icons i {
+  font-size: 18px;
+  margin: 0 5px;
+  color: #b1b31d;
+}
+
+.payment-icons img {
+  width: 40px;
+  height: auto;
+  margin: 0 5px;
+}
+
+.footer-bottom {
+  background: #fff;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.footer-column {
+  flex: 1 1 180px;
+  margin: 20px;
+}
+
+.footer-column h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.footer-column p {
+  color: #777;
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.logo-section img {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-info, .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .payment-icons img {
+    margin: 5px;
+  }
+}
+
+

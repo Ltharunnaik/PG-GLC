@@ -1,0 +1,34 @@
+.dialog-wrapper {
+  padding: 20px;
+  background: #f4f6f8;
+  font-family: Arial, sans-serif;
+}
+h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+label {
+  display: block;
+  margin: 8px 0;
+}
+.dialog-actions {
+  margin-top: 20px;
+}
+.confirm-btn {
+  background: #4caf50;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+}
+.cancel-btn {
+  background: #ccc;
+  padding: 10px 16px;
+  border: none;
+  margin-left: 10px;
+  border-radius: 5px;
+}

@@ -1,0 +1,142 @@
+.order-page {
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f6fdf5;
+}
+
+.order-header {
+  margin-bottom: 30px;
+
+  h1 {
+    font-size: 36px;
+    color: #2a5c2a;
+  }
+
+  p {
+    font-size: 14px;
+    color: #666;
+  }
+}
+
+.order-layout {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Left Cart Table */
+.order-left {
+  flex: 1;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+
+  th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+
+  th {
+    background-color: #f4f4f4;
+    color: #2a5c2a;
+  }
+
+  td.product-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+
+    img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+
+  input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 4px;
+  }
+
+  button {
+    padding: 2px 8px;
+    margin: 0 5px;
+    background: #cce5cc;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+/* Coupon Area */
+.coupon-area {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+
+  input {
+    padding: 10px;
+    flex: 1;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    background-color: #b6d62e;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+/* Right Summary */
+.order-right {
+  width: 300px;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+
+  h3 {
+    color: #2a5c2a;
+    margin-bottom: 20px;
+  }
+
+  p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .total {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2a5c2a;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background: #b6d62e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+}
